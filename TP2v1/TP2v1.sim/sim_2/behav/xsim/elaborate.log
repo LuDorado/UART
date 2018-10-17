@@ -1,0 +1,11 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 4f374a24a0d64ee8a24f10fd7c46b76e --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot rx_uut_behav xil_defaultlib.rx_uut xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port rx_done_tick on this module [/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sim_1/new/rx_uut.v:33]
+ERROR: [VRFC 10-2063] Module <brg> not found while processing module instance <BaudRateGenerator> [/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v:36]
+ERROR: [VRFC 10-2063] Module <rx> not found while processing module instance <Receptor> [/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v:43]
+ERROR: [VRFC 10-2063] Module <fifo> not found while processing module instance <RxInterface> [/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v:52]
+ERROR: [VRFC 10-2063] Module <alu_ic> not found while processing module instance <AluInterface> [/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v:63]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

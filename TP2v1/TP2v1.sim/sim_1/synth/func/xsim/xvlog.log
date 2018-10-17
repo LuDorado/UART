@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.sim/sim_1/synth/func/xsim/top_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rx
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl

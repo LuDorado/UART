@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="alu2fifo_uut_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="alu2fifo_uut" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="12380000000001fs"></ZoomEndTime>
+      <Cursor1Time time="2225000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject type="logic" fp_name="/alu2fifo_uut/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/BaudRateGenerator/s_tick">
+      <obj_property name="ElementShortName">s_tick</obj_property>
+      <obj_property name="ObjectShortName">s_tick</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/Receptor/rx">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/Receptor/d_rx2ic">
+      <obj_property name="ElementShortName">d_rx2ic[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_rx2ic[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/Receptor/rx_done">
+      <obj_property name="ElementShortName">rx_done</obj_property>
+      <obj_property name="ObjectShortName">rx_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/RxInterface/out_data">
+      <obj_property name="ElementShortName">out_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/RxInterface/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/get_data_A">
+      <obj_property name="ElementShortName">get_data_A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">get_data_A[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/get_data_B">
+      <obj_property name="ElementShortName">get_data_B[7:0]</obj_property>
+      <obj_property name="ObjectShortName">get_data_B[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/get_OP">
+      <obj_property name="ElementShortName">get_OP[5:0]</obj_property>
+      <obj_property name="ObjectShortName">get_OP[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/data_alu_out">
+      <obj_property name="ElementShortName">data_alu_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_alu_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/TxInterface/in_data">
+      <obj_property name="ElementShortName">in_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">in_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/TxInterface/out_data">
+      <obj_property name="ElementShortName">out_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_data[7:0]</obj_property>
+   </wvobject>
+</wave_config>
