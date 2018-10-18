@@ -28,10 +28,10 @@ module brg
     );
     
     // constants
-    parameter CLK_FREQ = 50_000_000;  // system clock frequency
+    parameter CLK_FREQ = 50_000_000;  // 100 system clock frequency 50 for simulation
     parameter BAUD_RATE = 9_600; //baud rate
     parameter DIV_SAMPLE = 16; //16oversampling4
-    parameter DIV_COUNTER = 163; //CLK_FREQ/(BAUD_RATE*DIV_SAMPLE);  
+    parameter DIV_COUNTER = 163;//CLK_FREQ/(BAUD_RATE*DIV_SAMPLE);  // 
     // this is the number we have to divide the system clock frequency to get a frequency (DIV_SAMPLE) time higher than (BAUD_RATE)
     parameter MID_SAMPLE = (DIV_SAMPLE/2);  // this is the middle point of a bit where you want to sample it
     parameter DIV_BIT = 10; // 1 start, 8 data, 1 stop

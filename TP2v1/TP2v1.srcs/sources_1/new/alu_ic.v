@@ -25,7 +25,11 @@ module alu_ic #(
         output reg wr_uart,
         output reg rd_uart,
         output wire [N_BITS-1:0] data_alu_out,
+        output wire [N_BITS-1:0] data_A,
+        output wire [N_BITS-1:0] data_B,
+        output wire [5:0] data_OC,
         input wire [N_BITS-1:0] data_alu_in,
+        input wire [N_BITS-1:0] data_rslt,
         input wire clk,
         input wire rst,
         input wire rx_empty_in
@@ -41,19 +45,13 @@ module alu_ic #(
     //registros	 
     reg signed [N_BITS-1:0] get_data_A,get_data_A_state;
     reg signed [N_BITS-1:0] get_data_B,get_data_B_state;
+    reg signed [N_BITS-1:0] get_rslt,get_rslt_state;
+
     reg [5:0] get_OP,get_OP_state;
     
     //variables de ejecucion
     reg [3:0] crnt_state = GET_A;
     reg [3:0] state_saved = GET_B;
-    
-    alu // #(.N_BITS(N_BITS)
-    Alu (	
-            .Adata(get_data_A),
-            .Bdata(get_data_B),
-            .op_code(get_OP),
-            .alu_output(data_alu_out)
-          );
     
     always @(posedge clk)
     if(rst)
@@ -61,14 +59,16 @@ module alu_ic #(
             get_data_A<= 8'b00000000;
             get_data_B<=8'b00000000;
             get_OP<=6'b000000;
+            get_rslt<=8'b00000000;
             crnt_state <= GET_A;
         end
     else
         begin
 
-            get_data_A<= get_data_A_state;
-            get_data_B<=get_data_B_state;
-            get_OP<=get_OP_state;
+            get_data_A <= get_data_A_state;
+            get_data_B <= get_data_B_state;
+            get_OP <= get_OP_state;
+            get_rslt <= get_rslt_state;
             crnt_state <= state_saved;
         end
     
@@ -79,38 +79,55 @@ module alu_ic #(
         wr_uart = 1'b0;
         get_data_A_state = get_data_A;
         get_data_B_state = get_data_B;
-        get_OP_state = +get_OP;
+        get_OP_state = get_OP;
+        get_rslt_state = get_rslt;
         case (crnt_state)
             GET_A:
-                    if(~rx_empty_in)
-                    begin
-                        get_data_A_state = data_alu_in;
-                        rd_uart = 1'b1;
-                        state_saved = GET_B;
-                    end
+                        if(~rx_empty_in)
+                        begin
+                            get_data_A_state = data_alu_in;
+                            rd_uart = 1'b1;
+                            get_rslt_state = 0;
+                            wr_uart = 1'b0;
+                            state_saved = GET_B;
+                        end
                 
             GET_B:	
-                    if(~rx_empty_in)
                     begin
-                        get_data_B_state = data_alu_in;
-                        rd_uart = 1'b1;
-                        state_saved = GET_OP;
+                        if(~rx_empty_in)
+                        begin
+                            get_data_B_state = data_alu_in;
+                            rd_uart = 1'b1;
+                            state_saved = GET_OP;
+                        end
+                        get_rslt_state = 0;
+                        wr_uart = 1'b0;
                     end
                             
             GET_OP: 
-                    if(~rx_empty_in)
                     begin
-                        get_OP_state = data_alu_in;
-                        rd_uart = 1'b1;
-                        state_saved = GET_RSLT;
+                        if(~rx_empty_in)
+                        begin
+                            get_OP_state = {data_alu_in[5:0]};
+                            rd_uart = 1'b1;
+                            state_saved = GET_RSLT;
+                        end
+                    get_rslt_state = 0;
+                    wr_uart = 1'b0;
                     end
                     
             GET_RSLT:	 
                     begin
+                        get_rslt_state = data_rslt;
                         wr_uart = 1'b1;
                         state_saved = GET_A;		
                     end
         endcase
     end
+    
+      assign data_A = get_data_A;
+      assign data_B = get_data_B;
+      assign data_OC = get_OP;
+      assign data_alu_out = get_rslt;
 
 endmodule

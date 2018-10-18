@@ -6,6 +6,7 @@ verilog xil_defaultlib  \
 "../../../../TP2v1.srcs/sources_1/new/fifo.v" \
 "../../../../TP2v1.srcs/sources_1/new/rx.v" \
 "../../../../TP2v1.srcs/sources_1/new/top.v" \
+"../../../../TP2v1.srcs/sources_1/new/tx.v" \
 "../../../../TP2v1.srcs/sim_1/new/rx_uut.v" \
 
 # compile glbl module

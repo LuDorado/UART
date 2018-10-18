@@ -61,10 +61,11 @@ module fifo #(
                     new_flag_op_state = 1'b1;      // Senf a notification to next module
                 end
             else if (rd)                          // If somebody wants to read
+                //crnt_buffer = in_data;         // Send current buffer to exit
                 new_flag_op_state = 1'b0;        // allow the reading
         end
       
      //output logic
      assign out_data = buffer;
-     assign empty = ~flag_op_state;
+     assign empty = ~flag_op_state;//~
 endmodule

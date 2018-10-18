@@ -12,33 +12,33 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="12380000000001fs"></ZoomEndTime>
-      <Cursor1Time time="2225000000000fs"></Cursor1Time>
+      <ZoomEndTime time="124800000001fs"></ZoomEndTime>
+      <Cursor1Time time="690000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
-   <wvobject type="logic" fp_name="/alu2fifo_uut/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/BaudRateGenerator/s_tick">
-      <obj_property name="ElementShortName">s_tick</obj_property>
-      <obj_property name="ObjectShortName">s_tick</obj_property>
-   </wvobject>
+   <WVObjectSize size="17" />
    <wvobject type="logic" fp_name="/alu2fifo_uut/uut/Receptor/rx">
       <obj_property name="ElementShortName">rx</obj_property>
       <obj_property name="ObjectShortName">rx</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/Receptor/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/Receptor/n_ticks_strt">
+      <obj_property name="ElementShortName">n_ticks_strt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">n_ticks_strt[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/Receptor/b_saved">
+      <obj_property name="ElementShortName">b_saved[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_saved[7:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/alu2fifo_uut/uut/Receptor/d_rx2ic">
       <obj_property name="ElementShortName">d_rx2ic[7:0]</obj_property>
       <obj_property name="ObjectShortName">d_rx2ic[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/alu2fifo_uut/uut/Receptor/rx_done">
-      <obj_property name="ElementShortName">rx_done</obj_property>
-      <obj_property name="ObjectShortName">rx_done</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/alu2fifo_uut/uut/RxInterface/out_data">
       <obj_property name="ElementShortName">out_data[7:0]</obj_property>
@@ -59,6 +59,22 @@
    <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/get_OP">
       <obj_property name="ElementShortName">get_OP[5:0]</obj_property>
       <obj_property name="ObjectShortName">get_OP[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/Alu/Adata">
+      <obj_property name="ElementShortName">Adata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Adata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/Alu/Bdata">
+      <obj_property name="ElementShortName">Bdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Bdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/Alu/op_code">
+      <obj_property name="ElementShortName">op_code[5:0]</obj_property>
+      <obj_property name="ObjectShortName">op_code[5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/Alu/alu_output">
+      <obj_property name="ElementShortName">alu_output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_output[7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/alu2fifo_uut/uut/AluInterface/data_alu_out">
       <obj_property name="ElementShortName">data_alu_out[7:0]</obj_property>

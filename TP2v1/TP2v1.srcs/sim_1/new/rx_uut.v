@@ -22,18 +22,18 @@
 
 module rx_uut();
     
-    wire [7:0] dout;
-    wire rx_done_tick;
+    wire dout;
+    //output rx_empty_tick,//,tx_empty_start
     reg clk;
     reg rst;
     reg rx;
     
-top uut
-            (.dout(dout),
-             .rx_done_tick(rx_done_tick),
-            .clk(clk),
-            .rst(rst),
-            .rx(rx));
+    top uut
+        (.dout(dout),
+        .clk(clk),
+        .rst(rst),
+        .rx(rx)
+        );
     initial
     begin
         #5;
@@ -45,9 +45,9 @@ top uut
         clk = 1'b0;
         
         #52160;
-        rx = 0;
+        rx = 0;     //Datoa = CC
         #52160;
-        rx = 1'b1; //d0
+        rx = 1'b0; //d0
         #52160;
         rx = 1'b0;  //D1
         #52160;
@@ -62,6 +62,51 @@ top uut
         rx = 1'b1;  //D6
         #52160;
         rx = 1'b1;  //D7
+        #52160;
+        rx = 1'b1;  //PARITY
+        
+        #52160;
+        rx = 0;     //DatoB = 48
+        #52160;
+        rx = 1'b0; //d0
+        #52160;
+        rx = 1'b0;  //D1
+        #52160;
+        rx = 1'b0;  //D2
+        #52160;
+        rx = 1'b1;  //D3
+        #52160;
+        rx = 1'b0;  //D4
+        #52160; 
+        rx = 1'b0;  //D5
+        #52160;
+        rx = 1'b1;  //D6
+        #52160;
+        rx = 1'b0;  //D7
+        #52160;
+        rx = 1'b1;  //PARITY
+        
+        #52160;
+        rx = 0;     //DatoOP = ADD
+        #52160;
+        rx = 1'b0; //d0
+        #52160;
+        rx = 1'b0;  //D1
+        #52160;
+        rx = 1'b0;  //D2
+        #52160;
+        rx = 1'b0;  //D3
+        #52160;
+        rx = 1'b0;  //D4
+        #52160; 
+        rx = 1'b1;  //D5
+        #52160;
+        rx = 1'b0;  //D6
+        #52160;
+        rx = 1'b0;  //D7
+        #52160;
+        rx = 1'b1;  //PARITY
+
     end
         
     always
@@ -77,7 +122,7 @@ top uut
     localparam T = 500;
 
     wire [7:0] dout;
-    wire rx_done_tick;
+    wire rx_empty_tick;
     reg clk;
     reg rst;
     wire tick;
@@ -85,7 +130,7 @@ top uut
     
     top uut
         (.dout(dout),
-         .rx_done_tick(rx_done_tick),
+         .rx_empty_tick(rx_empty_tick),
         .clk(clk),
         .rst(rst),
         .rx(rx));
@@ -96,7 +141,7 @@ top uut
                 );
     rx rx_uut (
                 .d_rx2ic(dout),
-                .rx_done(rx_done_tick),
+                .rx_done(rx_empty_tick),
                 .clk(clk),
                 .rst(rst),
                 .s_tick(tick),

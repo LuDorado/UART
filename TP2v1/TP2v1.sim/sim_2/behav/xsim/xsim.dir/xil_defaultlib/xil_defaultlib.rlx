@@ -3,10 +3,11 @@
 Oct  1 2018
 18:29:25
 /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.sim/sim_2/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sim_1/new/rx_uut.v,1539381233,verilog,,,,rx_uut,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sim_1/new/rx_uut.v,1539879367,verilog,,,,rx_uut,,,,,,,,
 /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/alu.v,1539788933,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/alu_ic.v,,alu,,,,,,,,
-/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/alu_ic.v,1539788550,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/brg.v,,alu_ic,,,,,,,,
-/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/brg.v,1539791593,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/fifo.v,,brg,,,,,,,,
-/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/fifo.v,1539777797,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/rx.v,,fifo,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/alu_ic.v,1539871350,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/brg.v,,alu_ic,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/brg.v,1539870030,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/fifo.v,,brg,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/fifo.v,1539886451,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/rx.v,,fifo,,,,,,,,
 /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/rx.v,1539777640,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v,,rx,,,,,,,,
-/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v,1539792101,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sim_1/new/rx_uut.v,,top,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v,1539879098,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/tx.v,,top,,,,,,,,
+/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/tx.v,1539881489,verilog,,/media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sim_1/new/rx_uut.v,,tx,,,,,,,,

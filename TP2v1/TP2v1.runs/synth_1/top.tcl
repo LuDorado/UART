@@ -34,6 +34,7 @@ read_verilog -library xil_defaultlib {
   /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/brg.v
   /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/fifo.v
   /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/rx.v
+  /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/tx.v
   /media/lu/Data/FACU/ARQUITECTURA/PRACTICOS/2018/TP2/TP2v1/TP2v1.srcs/sources_1/new/top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
